@@ -70,7 +70,7 @@ async function sendMessage() {
 			{
 				method: 'POST',
 				headers: {
-					'Content-Type': 'application/json', // ДОБАВЬ ЭТО
+					'Content-Type': 'application/json',
 				},
 				body: JSON.stringify({ chatId, message }),
 			},
@@ -98,7 +98,7 @@ async function sendFileByUrl() {
 			{
 				method: 'POST',
 				headers: {
-					'Content-Type': 'application/json', // И ЗДЕСЬ ТОЖЕ
+					'Content-Type': 'application/json',
 				},
 				body: JSON.stringify({ chatId, urlFile, fileName }),
 			},
