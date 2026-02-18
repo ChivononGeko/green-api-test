@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>GREEN-API Console</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<div class="container">
+			<section class="controls">
+				<h3>Instance Parameters</h3>
+				<input type="text" id="idInstance" placeholder="idInstance" required />
+				<input
+					type="password"
+					id="apiTokenInstance"
+					placeholder="ApiTokenInstance"
+					required
+				/>
+
+				<div class="button-group">
+					<button onclick="getSettings()">getSettings</button>
+					<button onclick="getStateInstance()">getStateInstance</button>
+				</div>
+
+				<hr />
+
+				<h3>Sending a message</h3>
+				<input
+					type="text"
+					id="chatIdText"
+					placeholder="77771234567"
+					oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+				/>
+				<textarea
+					id="messageText"
+					placeholder="Enter the text of the message"
+				></textarea>
+				<button onclick="sendMessage()">sendMessage</button>
+
+				<hr />
+
+				<h3>Sending a file by URL</h3>
+				<input
+					type="text"
+					id="chatIdFile"
+					placeholder="77771234567"
+					oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+				/>
+				<input
+					type="text"
+					id="fileUrl"
+					placeholder="https://example.com/image.jpg"
+				/>
+				<button onclick="sendFileByUrl()">sendFileByUrl</button>
+			</section>
+
+			<section class="response-area">
+				<h3>API Response:</h3>
+				<textarea
+					id="responseField"
+					readonly
+					placeholder="Here the API response will appear..."
+				></textarea>
+			</section>
+		</div>
+		<script src="script.js"></script>
+	</body>
+</html>
